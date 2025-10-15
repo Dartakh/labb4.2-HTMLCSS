@@ -134,6 +134,7 @@
 
     }
 
+    /*Denna kod nedan är en kopia av ovan kod med justering i bildgalleriet för att minska mellanrummet mellan galleriet och elemnetet under */
     @media (min-width: 1028px){
          .top-wrapper{
             display: grid;
@@ -184,7 +185,7 @@
         }
         
         .gallery figure {
-            margin 0; 
+            margin: 0; 
         }
 
         .offer-secondary{
