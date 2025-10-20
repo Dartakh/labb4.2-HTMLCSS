@@ -1,204 +1,196 @@
-    :root{
-        --blue: #2F80ED;
-        --light-blue: #E0ECFD;
-        --text: black;
-        --textfooter: #ffff;
-        --radius: 1.6%;
-    }
+:root { 
+    --blue: #2F80ED; 
+    --light-blue: #E0ECFD; 
+    --text: black; 
+    --textfooter: #ffff; 
+    --radius: 1.6%; 
+} 
 
-    * {
-        box-sizing: border-box;
-        padding: 0;
-        
-    }
+* { 
+    box-sizing: border-box; 
+    padding: 0; 
+} 
 
-    body {
-        margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        line-height: 1.5;
-        background-color: white;
-        color:var(--text);
-    }
+body {
+    max-width: 1600px;
+    margin: 0 auto; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    line-height: 1.5; 
+    background-color: white; 
+    color: var(--text); 
+} 
 
-    img {
-        width: 100%;
-        display: block;
-        height: auto;
-        object-fit: cover;
-    }
+img { 
+    width: 100%; 
+    display: block; 
+    height: auto; 
+    object-fit: cover; 
+} 
 
-    .logo img {
-        width: 100px;
-        height: 70px;
-        padding: 1%;
-    }
-    
-    .gallery{
+.logo img { 
+    width: 100px; 
+    height: auto;
+} 
+
+.gallery { 
+    display: grid; 
+    gap: 2px; 
+} 
+
+.hero-content { 
+    background-color: rgb(245, 243, 243); 
+    margin: 2%; 
+    padding: 2%; 
+} 
+
+h2 { 
+    color: var(--blue); 
+    text-align: left; 
+    margin-bottom: 2% 
+} 
+
+.offer-secondary { 
+    background-color: var(--light-blue); 
+    padding: 1.5%; 
+    border-radius: 0px 25px 25px 0px; /* Lärde mig idag att så här kan man göra, tack YouTube! */
+    text-align: left; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+} 
+
+.offer-secondary ul { 
+    list-style-type: none; 
+} 
+
+.offer-primary { 
+    display: none; 
+} 
+
+footer { 
+    background-color: var(--blue); 
+    color: var(--textfooter); 
+} 
+
+/* Nedan kod är tänkt att innehålla CSS för skärmar som börjar på 768 px, längre ner i filen finns det för ännu större skärmar (desktop-typ) */
+@media (min-width: 768px) {
+    .top-wrapper {
         display: grid;
-        gap: 2px;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        background-color: white;
+        gap: 1.5rem;
+        margin-right: 0;
     }
 
-    .hero-content {
-        background-color: rgb(245, 243, 243);
-        margin: 2%;
-        padding: 2%;
+    .offer-primary {
+        display: block;
+        background-color: var(--blue);
+        color: white;
+        list-style-type: none;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 120px;
+        align-items: stretch;
+        padding-left: 5%;
+        padding-top: 7%;
+        margin-top: -5.5rem;
+        margin-right: -2.5rem;
     }
 
-    h2{
-        color: var(--blue);
-        text-align: left;
-        margin-bottom: 2%
-    }
-
-    .offer-secondary{
-        background-color: var(--light-blue);
-        padding: 1.5%;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        text-align: left;
-        margin-top: 1%;
-        margin-bottom: 1%;
-    }
-
-    .offer-secondary ul {
+    .offer-primary ul {
         list-style-type: none;
     }
 
-    .offer-primary{
-        display: none;
+    .secondoffer-pictures {
+        display: flex;
+        flex-direction: column;
     }
 
-    footer {
+    .gallery {
+        order: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .offer-secondary {
+        order: 2;
+    }
+
+    .gallery img {
+        border-radius: 20px;
+        gap: 1.5rem;
+        margin: 5%;
+        width: 250px;
+        height: 150px;
+    }
+
+    .offer-secondary {
+        margin-left: -10px;
+        max-width: 65%;
+        border-radius: 25px;
+        border-radius: 0px 25px 25px 0px; /* Lärde mig idag att så här kan man göra, tack YouTube! */
+    }
+}
+
+/* Denna kod nedan är en kopia av ovan kod med justering i bildgalleriet för att minska mellanrummet mellan galleriet och elemnetet under */
+@media (min-width: 1028px) {
+    .top-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        background-color: white;
+        gap: 1.5rem;
+        margin-right: 0;
+    }
+
+    .offer-primary {
+        display: block;
         background-color: var(--blue);
-        color: var(--textfooter);
+        color: white;
+        list-style-type: none;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 120px;
+        align-items: stretch;
+        padding-left: 5%;
+        padding-top: 7%;
+        margin-top: -5.5rem;
+        margin-right: -2.5rem;
     }
 
-    /* Nedan kod är tänkt att innehålla CSS för skärmar som börjar på 768 px, längre ner i filen finns det för ännu större skärmar (desktop-typ) */
-
-    @media (min-width: 768px){
-
-        .top-wrapper{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: stretch;
-            background-color: white;
-            gap: 1.5rem;
-            margin-right: 0;
-        }
-
-        .offer-primary {
-            display: block;
-            background-color: var(--blue);
-            color: white;
-            list-style-type: none;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
-            border-bottom-left-radius: 120px;
-            align-items: stretch;
-            padding-left: 5%;
-            padding-top: 7%;
-            margin-top: -5.5rem;
-            margin-right: -2.5rem;
-        }
-
-        .offer-primary ul{
-            list-style-type: none;
-        }
-
-        .secondoffer-pictures {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .gallery {
-            order: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;}
-        .offer-secondary{order:2}
-
-        .gallery img {
-            border-radius: 20px;
-            gap: 1.5rem;
-            margin: 5%;
-            width: 250px;
-            height: 150px;
-        }
-
-        .offer-secondary{
-            margin-left: -10px;
-            max-width: 65%;
-            border-radius: 25px;
-        }
-
+    .offer-primary ul {
+        list-style-type: none;
     }
 
-    /*Denna kod nedan är en kopia av ovan kod med justering i bildgalleriet för att minska mellanrummet mellan galleriet och elemnetet under */
-    @media (min-width: 1028px){
-         .top-wrapper{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: stretch;
-            background-color: white;
-            gap: 1.5rem;
-            margin-right: 0;
-        }
-
-        .offer-primary {
-            display: block;
-            background-color: var(--blue);
-            color: white;
-            list-style-type: none;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
-            border-bottom-left-radius: 120px;
-            align-items: stretch;
-            padding-left: 5%;
-            padding-top: 7%;
-            margin-top: -5.5rem;
-            margin-right: -2.5rem;
-        }
-
-        .offer-primary ul{
-            list-style-type: none;
-        }
-
-        .secondoffer-pictures {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .gallery {
-            order: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        
-        .gallery img {
-            border-radius: 20px;
-            gap: 1.5rem;
-            margin: 5%;
-            width: 250px;
-            height: 150px;
-        }
-        
-        .gallery figure {
-            margin: 0; 
-        }
-
-        .offer-secondary{
-            order:2;
-            margin-top: -6rem;
-        }
-
-        .offer-secondary{
-            margin-left: -10px;
-            max-width: 65%;
-            border-radius: 25px;
-        }
-
-
+    .secondoffer-pictures {
+        display: flex;
+        flex-direction: column;
     }
 
+    .gallery {
+        order: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .gallery img {
+        border-radius: 20px;
+        gap: 1.5rem;
+        margin: 5%;
+        width: 250px;
+        height: 150px;
+    }
+
+    .gallery figure {
+        margin: 0;
+    }
+
+    .offer-secondary {
+        order: 2;
+        margin-top: -6rem; /* tar bort luft över för att desktop version ska bli bra */
+        border-radius: 0px 25px 25px 0px; /* Lärde mig idag att så här kan man göra, tack YouTube! */
+    }
+}
