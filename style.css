@@ -131,6 +131,7 @@ footer {
         max-width: 65%;
         border-radius: 25px;
         border-radius: 0px 25px 25px 0px; /* Lärde mig idag att så här kan man göra, tack YouTube! */
+        padding-left: 1rem;
     }
 }
 
@@ -192,5 +193,6 @@ footer {
         order: 2;
         margin-top: -6rem; /* tar bort luft över för att desktop version ska bli bra */
         border-radius: 0px 25px 25px 0px; /* Lärde mig idag att så här kan man göra, tack YouTube! */
+        padding-left: 1rem;
     }
 }
